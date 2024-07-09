@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Components/home';
+
 
 // Define your main component
 function App() {
-    return (
-        <div>
-            <h1>Welcome to My React Website!</h1>
-            {/* Add your content here */}
-        </div>
-    );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 // Render the main component to the DOM
