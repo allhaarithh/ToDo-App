@@ -17,6 +17,10 @@ module.exports = {
           '300': '#b0578d',
         },
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        Monsterrat : ["Monsterrat","sans-serif"]
+      },
     },
   },
   plugins: [],

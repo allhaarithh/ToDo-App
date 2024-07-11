@@ -1,10 +1,10 @@
 
 import React,{useEffect} from "react";
-import { Link, useNavigate } from 'react-router-dom'; // Import Link
+import { Link,useNavigate } from 'react-router-dom'; // Import Link
 import '../Component CSS/navbar.css';
 import LogoImage from '../Images/websitelogo.png';
 
-function Navbar(){
+function Fixednavbar(){
 
     const navigate = useNavigate();
     useEffect(() => {
@@ -32,7 +32,8 @@ function Navbar(){
       };
 
     return (
-        <nav className="bg-purple-300 text-purple-50 p-4 navbar">
+        
+        <nav className="bg-purple-300 text-purple-50 p-4 fixednavbar">
             <style>
 {`
     .poppins-font {
@@ -50,7 +51,7 @@ function Navbar(){
 </style>
             <div className="container mx-auto flex justify-between items-center poppins-font">
                 <div className="text-lg font-bold">
-                    <Link to="/" className="hover:opacity-75 text-purple-100"><img src={LogoImage} alt="ToDo list web app logo" className="navbar-logo "/></Link> {/* Updated hover effect */}
+                <Link to="/" className="hover:opacity-75 text-purple-100"><img src={LogoImage} alt="ToDo list web app logo" className="navbar-logo "/></Link> {/* Updated hover effect */}
                 </div>
                 <ul className="flex space-x-4 font-Poppins">
                     <li>
@@ -63,7 +64,7 @@ function Navbar(){
                         <Link to="/signup" className="hover:opacity-75 ">Signup</Link>{/* Updated hover effect */}
                     </li>
                     <li>
-                    <button onClick={handleLogout} className="hover:opacity-75 ">Logout</button> {/* Updated hover effect */}
+                        <button onClick={handleLogout} className="hover:opacity-75 ">Logout</button> {/* Updated hover effect */}
                     </li>
                 </ul>
             </div>
@@ -71,4 +72,4 @@ function Navbar(){
     );
 };
 
-export default Navbar;
+export default Fixednavbar;

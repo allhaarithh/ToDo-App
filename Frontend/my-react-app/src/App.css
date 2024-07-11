@@ -8,12 +8,46 @@
   pointer-events: none;
 }
 
+.maint1, .maint2 {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for the element's own size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center text lines */
+  font-family: 'Poppins, sans-serif';
+}
+
+.maint1 {
+  top: calc(50% - 20px); /* Adjust this value based on the actual height of .maint1 */
+}
+
+.maint2 {
+  top: calc(50% + 20px); /* Adjust this value to position .maint2 below .maint1 */
+}
+
+.outer{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 30px;
+}
+
+.signlog{
+  padding-top: 100px;
+  font-size: large;
+  font-weight: bold;
+}
 /* Ensure the main content is tall enough to require scrolling */
 .main-content {
   min-height: 200vh; /* 100% of the viewport height */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #ffe4d6;
 }
 
 .footer {
